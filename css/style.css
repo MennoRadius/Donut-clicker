@@ -1,0 +1,149 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+h1::selection, h2::selection, p::selection, span::selection, img::selection{
+  background: #2ecc71; /* WebKit/Blink Browsers */
+}
+
+h1::-moz-selection, h2::-moz-selection, p-::-moz-selection, span::-moz-selection, img::-moz-selection {
+  background: #2ecc71; /* Gecko Browsers */
+}
+
+html, body{
+	font-family: 'Open Sans', sans-serif;	color: #eee;
+	background-color: #2ecc71;
+}
+
+header{
+	background-color: #e74c3c;
+}
+
+
+header img{
+	position: absolute;
+	width: 50px;
+	top: 30px;
+	left: 25%;
+	-webkit-animation: donut-roll 5s infinite;
+	animation: donut-roll 5s infinite;
+}
+
+
+@-webkit-keyframes donut-roll{
+	0% 		{left: 25%;}
+	50%		{left: 75%;}
+	100% 	{left: 25%;}
+}
+
+@keyframes donut-roll{
+	0% 		{left: 25%;}
+	50%		{left: 75%;}
+	100% 	{left: 25%;}
+}
+header h1{
+	text-align: center;
+	color: #eee;
+	padding-bottom: 50px;
+}
+
+p{
+	font-size: 1.3em;
+	text-align: center;
+}
+.container{
+	width: 100%;
+}
+
+.content{
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+#donut{
+	height: 200px;
+	transition: height 0.1s, margin-bottom 0.1s, margin-top 0.1s;
+	display: block;
+	margin: 50px auto;
+}
+
+#donut:active{
+	height: 190px;
+	margin-bottom: 55px;
+	margin-top: 55px;
+}
+
+#donut:hover{
+	cursor: pointer;
+}
+
+.tabs{
+	max-width: 960px;
+	background-color: #e74c3c;
+
+	-webkit-box-shadow: 4px 4px 0px 2px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    4px 4px 0px 2px rgba(50, 50, 50, 0.75);
+	box-shadow:         4px 4px 0px 2px rgba(50, 50, 50, 0.75);
+}
+
+.tab{
+	margin: 0 auto;
+	width: 200px;
+	height: 100%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.tab h2{
+	padding: 20px;
+}
+
+.stats span{
+	background-color: #e74c3c;
+	font-size: 1.3em;
+	padding: 20px;
+	display: block;
+}
+
+.btn{
+	padding: 20px;
+	background-color: #e74c3c;
+	cursor: pointer;
+}
+
+.achievements{
+	width: auto;
+}
+
+.achievement{
+	width: 50px;
+	padding: 10px;
+	margin: 0 0 20px 20px;
+	border: 2px solid #2ecc71;
+	cursor: pointer;
+	background-color: #555;
+	display: inline-block;
+
+	-webkit-box-shadow: 4px 4px 0px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    4px 4px 0px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         4px 4px 0px 0px rgba(50, 50, 50, 0.75);
+}
+
+#achievement1, #achievement2, #achievement3, #achievement4, #achievement5, #achievement6{
+	transition: margin 0.5s;
+}
+
+#achievement1:hover, #achievement2:hover, #achievement3:hover, #achievement4:hover, #achievement5:hover, #achievement6:hover{
+	margin: -5px 0px 15px 20px;
+}
+
+.locked{
+	opacity: 0.5;
+}
+
+@media screen and (max-width: 494px){
+	header img{
+		top: 65px;
+	}
+}
